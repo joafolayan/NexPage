@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexPage</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    {% extends 'base.html' %}
+    {%block content%}
+    <main>
+        <section class="banner">
+            <div class="banner-txt">
+                <p>Login to use the Library system and start enjoying a variety of books at your fingertips</p>
+                <button><a href="{{url_for('login')}}">Login</a></button>
+            </div>
+            <div class="banner-img">
+                <img src="{{url_for('static', filename='images/banner-img.jpg')}}" alt="" srcset="">
+            </div>
+        </section>
+    </main>
+    {%endblock%}
+</body>
+</html>

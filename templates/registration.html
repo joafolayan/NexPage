@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an account..</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <section class="form-header">
+        <h1>Register as a user</h1>
+    </section>
+    <form method="post">
+
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" required>
+
+        <label for="username">Email</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="username">Password</label>
+        <input type="password" name="password" id="password" required>
+
+        <label for="username">Confirm Password</label>
+        <input type="password" name="confirm_password" id="confirm password" required>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <section class="form-text">
+        <p>Already have an account? <a href="{{url_for('login')}}">Login here</a></p>
+    </section>
+
+    {% endblock %}
+</body>
+</html>

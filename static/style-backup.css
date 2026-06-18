@@ -1,0 +1,116 @@
+/* Nav styles */
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2vh 2vw 2vh 3vw;
+}
+nav .nav-links{
+    margin: 2vh 0;
+}
+.nav-links a{
+    margin-right: 1vw;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* banner styles */
+.banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5vh;
+}
+.banner-txt{
+    padding: 18vh 3vw;
+}
+.banner-txt button{
+    width: 15vw;
+    padding: 2vh 1vw;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.banner .banner-txt p{
+    font-size: 28px;
+    font-weight: 800;
+}
+.banner-img{
+    padding: 0 2vw;
+}
+.banner-img img{
+    width: 55vw;
+}
+
+/* Flash Messages */
+.flash-messages {
+    margin-bottom: 1.5rem;
+}
+
+.flash {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.flash.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.flash.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.flash.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+/* form style */
+.form-header, .form-text{
+    margin: 1vh 5vw;
+}
+.form-header{
+    margin-top: 12vh;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 1vh 5vw;
+}
+input[type=text], input[type=password],input[type=email],input[type=search]{
+  width: 100%;
+  padding: 2vh 1vw;
+  margin: 2vh 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50; 
+  color: white;
+  padding: 2vh 3vw;
+  margin: 2vh 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.search-box button{
+  width: 100%;
+  background-color: #4CAF50; 
+  color: white;
+  padding: 2vh 3vw;
+  margin: 2vh 0;
+  border: none;
+  border-radius: 4px
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexPage... an online library system</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+
+    {% extends "base.html" %}
+
+    {% block content %}
+
+    <h1>Welcome, {{ session['user'] }}</h1>
+    <section class="top-btn">
+        <p><a href="{{ url_for('bookPage') }}">Search & Borrow More Books</a></p>
+        <p><a href="{{ url_for('logout') }}">Logout</a></p>
+    </section>
+
+    {% if borrowed %}
+        {% for b in borrowed %}
+            <div class="book-card">
+                {% if b.book.bookImage %}
+                    <img src="{{ url_for('static', filename='uploads/' + b.book.bookImage) }}" class="cover-img" width="100">
+                {% endif %}
+                <p><a href="{{ url_for('returnBook', book_id=b.book.id) }}">Return Book</a></p>
+
+                <p><strong>Title:</strong> {{ b.book.title }}</p>
+                <p><strong>Author:</strong> {{ b.book.author }}</p>
+                <p><strong>Due Date:</strong> {{ b.due_date.strftime('%Y-%m-%d') }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>You have not borrowed any books yet.</p>
+    {% endif %}
+
+    <h3 class="fine">Total Fine Due: ${{ fine }}</h3>
+
+    <!-- <p><a href="{{ url_for('bookPage') }}">Search & Borrow More Books</a></p>
+    <p><a href="{{ url_for('logout') }}">Logout</a></p> -->
+    {% endblock %}
+</body>
+</html>
